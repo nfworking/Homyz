@@ -1,7 +1,7 @@
 import video from "../assets/hero.mp4";
-import logo from "../assets/logo.png";
-import hero from "../assets/hero.jpeg";
-import { motion } from "framer-motion";
+
+import hero from "../assets/thumbnail.png";
+
 
 const HeroSection = () => {
   return (
@@ -19,7 +19,7 @@ const HeroSection = () => {
       </div>
       <div className="absolute -z-10">
         <div className="relative z-20 flex h-screen flex-col justify-end pb-20">
-            <motion.img initial={{ opacity: 0, y: 100}} animate={{ opacity: 1, y: 0}} transition={{ duration: 5}}  src={logo} className=" w-full p-4" alt="resturant"/>
+            <h1 className="text-center justify-center text-9xl">Homyz</h1>
             <p className="p-8 tracking-tighter text-lg text-white "></p>
         </div>
       </div>
