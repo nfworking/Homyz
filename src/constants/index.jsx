@@ -16,10 +16,9 @@ import indian from "../assets/indian.jpeg";
 import { FaXTwitter, FaFacebook, FaInstagram } from "react-icons/fa6";
 
 export const LINKS = [
-  { text: "Dishes", targetId: "dishes" },
+  { text: "Homes", targetId: "dishes" },
   { text: "About", targetId: "about" },
   { text: "Mission", targetId: "mission" },
-  { text: "Expertise", targetId: "expertise" },
   { text: "Review", targetId: "review" },
   { text: "Contact", targetId: "contact" },
 ];
@@ -80,13 +79,13 @@ export const DISHES = [
 ];
 
 export const ABOUT = {
-  header: "We love cooking!",
+  header: "We love making dreams come true!",
   content:
-    "At Restaura, we believe that great food goes beyond taste; it tells a story of dedication and creativity. From our chef's signature creations to our attentive service, every detail is curated to ensure your visit is nothing short of exceptional. Whether you're savoring our renowned Tikka Kebab or exploring our diverse menu inspired by global flavors, each dish is a celebration of flavor and innovation. Join us for a culinary journey where every bite leaves a lasting impression. Experience Restaura—where every meal is a masterpiece.",
+    "At Homyz, we believe in making dreams come true no matter how big or small. Wether you need a home for you older one or a home for a large family, we have several luxry homes avaiable for you. We can help you with what ever needs you have. Any questions? Let us know!",
 };
 
 export const MISSION =
-  "At our restaurant, our mission is to create delicious and memorable dining experiences.";
+  "At Homyz, our mission is to provide the best customer experience to our clients";
 
 export const CUSINES = [
   {
@@ -113,16 +112,16 @@ export const CUSINES = [
 ];
 
 export const REVIEW = {
-  name: "Xaviour Fernando",
-  profession: "Food Critic",
+  name: "Chris Hemsworth",
+  profession: "Exclusive Billonare",
   content:
-    "“As a seasoned food critic, my expectations are always high when stepping into a new dining establishment. Restaura, with its unassuming exterior and elegantly designed interior, promised a unique culinary experience from the moment I walked in. And I must say, it delivered beyond my expectations.”",
+    "“I had a fantastic experience with Homyz. Their team is professional, knowledgeable, and dedicated to making the home buying process smooth. They took the time to understand my needs and provided clear, transparent advice throughout. Their customer service is exceptional—always available and incredibly helpful. Plus, their online tools made the process even easier. I highly recommend Homyz for anyone looking to buy or sell a home. Thanks to them, I found my dream home effortlessly!.”",
 };
 
 export const CONTACT = [
-  { key: "address", value: "Address: 123 Main Street, Paris, France, 345678" },
-  { key: "phone", value: "Phone: 123-456-7890" },
-  { key: "email", value: "Email: contact@restaurant.com" },
+  { key: "address", value: "Address: 1432 Great Ocean Drive, Australia" },
+  { key: "phone", value: "Phone: 1432-386-2986" },
+  { key: "email", value: "Email: hi@homyz.com" },
 ];
 
 export const SOCIAL_MEDIA_LINKS = [

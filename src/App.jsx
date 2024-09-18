@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar"
 import Dishes from "./components/Dishes"
 import About from "./components/About"
 import Mission from "./components/Mission"
-import Expertise from "./components/Expertise"
+
 import Review from "./components/Review"
 import ContactSection from "./components/ContactSection"
 import Footer from "./components/Footer"
@@ -17,7 +17,7 @@ const App = () => {
       <Dishes/>
       <About/>
       <Mission/>
-      <Expertise/>
+     
       <Review/>
       <ContactSection/>
       <Footer/>

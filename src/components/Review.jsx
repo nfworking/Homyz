@@ -1,9 +1,6 @@
 import { REVIEW } from "../constants"
 import xaviour from "../assets/xaviour.jpeg"
-import customer1 from "../assets/customer1.jpeg"
-import customer2 from "../assets/customer2.jpeg"
-import customer3 from "../assets/customer3.jpeg"
-import customer4 from "../assets/customer4.jpeg"
+
 
 
 const Review = () => {
@@ -20,12 +17,7 @@ const Review = () => {
                     <p className="text-sm text-neutral-500">{REVIEW.profession}</p>
                 </div>
             </div>
-        </div>
-        <div className="mt-14 flex flex-col items-center justify-center gap-2 md:flex-row">
-            {[customer1, customer2, customer3, customer4].map((customer, index) => (
-                <img src={customer} alt="customer" key={index} className="h-[300px] w-[200px] rounded-br-3xl rounded-t;-3x; object-cover"/>
-            ))}
-        </div>
+        </div>  
     </section>
   )
 }
