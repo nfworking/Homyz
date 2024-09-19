@@ -1,5 +1,5 @@
-import video from "../assets/hero.mp4";
-import hero from "../assets/thumbnail.png";
+import video from "/src/assets/hero.mp4";
+import hero from "/src/assets/thumbnail.png";
 import { motion } from "framer-motion";
 
 const HeroSection = () => {
@@ -18,7 +18,7 @@ const HeroSection = () => {
       </div>
       <div className="absolute -z-10">
         <div className="relative z-20 flex h-screen flex-col justify-end pb-20">
-            <h1 className="text-center justify-center text-9xl uppercase">Homyz</h1>
+            <h1 className="text-center justify-center text-9xl uppercase">Casa Mexicali</h1>
               <p className="p-8 tracking-tighter text-lg text-white "></p>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { SOCIAL_MEDIA_LINKS } from "../constants"
+import { SOCIAL_MEDIA_LINKS } from "/src/constants"
 
 
 const Footer = () => {
