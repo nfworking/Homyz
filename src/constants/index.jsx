@@ -28,7 +28,7 @@ export const DISHES = [
     image: dish1,
     title: "Spaghetti Carbonara",
     description: "Creamy pasta with bacon and cheese",
-    forward: "gooogle.com",
+    forward: "Main_River_Magic/",
   },
   {
     image: dish2,

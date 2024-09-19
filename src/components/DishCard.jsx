@@ -1,11 +1,11 @@
 const DishCard = ({ project }) => {
   return (
-    <div>
+    <div className="hover:scale-110 transition-all duration-300">
      <a href={project.forward}><img
         src={project.image}
         alt={project.title}
        
-        className="rounded-3xl p-2"
+        className="rounded-3xl p-2 "
       />
       </a> 
       <div className="p-4">
