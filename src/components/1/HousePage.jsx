@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Star, Check, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const images = [
-  "/src/assets/dish1.jpeg",
-  "/src/assets/dish2.jpeg",
-  "/src/assets/dish3.jpeg",
-  "/src/assets/dish4.jpeg",
+  "https://www.eliteholidayhomes.com.au/wp-content/uploads/2022/03/Mexicali-1-1024x686.jpg",
+  "https://www.eliteholidayhomes.com.au/wp-content/uploads/2022/03/006_Open2view_ID784672-4_Mexicali_Court-1024x684.jpg",
+  "https://www.eliteholidayhomes.com.au/wp-content/uploads/2022/03/005_Open2view_ID784672-4_Mexicali_Court-1024x684.jpg",
+  "https://www.eliteholidayhomes.com.au/wp-content/uploads/2022/03/007_Open2view_ID784672-4_Mexicali_Court-1024x684.jpg",
 ];
 
 export default function ProductPage() {
