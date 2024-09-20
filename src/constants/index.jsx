@@ -34,48 +34,33 @@ export const DISHES = [
     image: dish2,
     title: "Chicken Tikka Masala",
     description: "Indian curry with tender chicken in spicy sauce",
+    forward: "/Coobowie_Waters/",
   },
   {
     image: dish3,
     title: "Caprese Salad",
     description: "Fresh tomatoes, mozzarella, and basil with balsamic glaze",
+    forward: "/Coral_Sands/",
   },
   {
     image: dish4,
     title: "Sushi Roll",
     description: "Assorted seafood and vegetables wrapped in seaweed and rice",
+    forward: "/Haven_On_Holland/",
   },
   {
     image: dish5,
     title: "Chocolate Lava Cake",
     description: "Decadent chocolate cake with a gooey center",
+    forward: "/Main_River_Magic/",
   },
   {
     image: dish6,
     title: "Greek Salad",
     description: "Crisp lettuce, olives, feta cheese, and tangy dressing",
+    forward: "/The_Lotus/",
   },
-  {
-    image: dish7,
-    title: "Pad Thai",
-    description: "Stir-fried rice noodles with shrimp, tofu, and peanuts",
-  },
-  {
-    image: dish8,
-    title: "Peking Duck",
-    description: "Crispy duck with pancakes, cucumber, and hoisin sauce",
-  },
-  {
-    image: dish9,
-    title: "Beef Wellington",
-    description: "Tender beef filet wrapped in pastry with mushrooms and herbs",
-  },
-  {
-    image: dish10,
-    title: "Tiramisu",
-    description:
-      "Italian dessert with layers of coffee-soaked biscuits and mascarpone",
-  },
+  
 ];
 
 export const ABOUT = {

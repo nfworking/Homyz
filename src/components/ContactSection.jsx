@@ -1,4 +1,4 @@
-import {CONTACT} from "../constants"
+import {CONTACT} from "/src/constants"
 
 const ContactSection = () => {
   return (
