@@ -1,18 +1,10 @@
-import HeroSection from "../src/components/2/HeroSection"
-import Navbar from "../src/components/2/Navbar"
-import Footer from "../src/components/2/Footer"
-import ContactSection from "../src/components/ContactSection"
-import HousesSection from "../src/components/2/HousePage"
+import Checkout from "../src/components/1/PaymentPage"
 
 
 const App = () => {
   return (
     <div className="overflow-y-hidden text-neutral-200">
-      <HeroSection/>
-      <Navbar />
-      <HousesSection/>
-      <ContactSection/>
-      <Footer/>
+      <Checkout/>
     </div>
   )
 }
