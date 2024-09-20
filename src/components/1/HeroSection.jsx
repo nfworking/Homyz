@@ -1,4 +1,4 @@
-import video from "/src/assets/hero.mp4";
+import house1 from "/src/assets/house-1.mp4";
 import hero from "/src/assets/thumbnail.png";
 import { motion } from "framer-motion";
 
@@ -7,7 +7,7 @@ const HeroSection = () => {
     <section className="relatie flex h-screen items-center justify-center">
       <div className="absolute inset-0 -z-20 h-full w-full overflow-hidden">
         <video
-          src={video}
+          src={house1}
           className="h-full w-full object-cover md:brightness-75"
           muted
           autoPlay
