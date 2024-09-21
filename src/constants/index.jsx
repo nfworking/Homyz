@@ -23,6 +23,13 @@ export const LINKS = [
   { text: "Review", targetId: "review" },
 ]
 
+export const LINKS_SINGLE_MAIN = [
+  { text: "Homes", targetId: "dishes" },
+  { text: "About", targetId: "about" },
+  { text: "Mission", targetId: "mission" },
+  { text: "Review", targetId: "review" },
+]
+
 export const LINKS_SINGLE = [
   { text: "Home", targetId: "/" },
  

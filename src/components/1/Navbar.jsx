@@ -1,8 +1,10 @@
 import { useState } from "react";
 import logo from "/src/assets/logo.png";
-import {LINKS_SINGLE} from "/src/constants"
+import {LINKS} from "/src/constants"
 import { FaTimes } from "react-icons/fa";
 import { FaBars } from "react-icons/fa6";
+import { LINKS_SINGLE } from "../../constants";
+
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -31,6 +33,7 @@ const Navbar = () => {
             {LINKS_SINGLE.map((link, index) => (
                 <a key={index} href={link.targetId} className={`text-sm ${index !== 0 ? "border-l-2 border-neutral-300/20 pl-2" : ""} hover:opacity-50`} >
                     {link.text}
+
                 </a>
 
             ))}
@@ -43,10 +46,13 @@ const Navbar = () => {
       </div>
       {isMobileMenuOpen && (
         <div className="w-full backdrop-blur-lg lg:hidden">
-            {LINKS.map((link, index) => (
-                <a key={index} href={`#${link.targetId}`} className="block p-4 uppercase tracking-tighter" onClick={(e) => handleScroll (e, link.targetId)}>{link.text}</a>
+            {LINKS_SINGLE.map((link, index) => (
+                <a key={index} href={link.targetId} className="block p-4 uppercase tracking-tighter" >{link.text}</a>
+
+
             ))}
         </div>
+
       )}
     </nav>
   );
