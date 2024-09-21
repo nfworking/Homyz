@@ -35,7 +35,8 @@ const Navbar = () => {
                
             ))}
         </div>
-        <a href="/Contact_Us/" className="text-sm hover:opacity-50">Contact Us</a>
+        <a href="/Contact_Us/" className="rounded-full bg-neutral-300/20 px-3 py-1 text-sm hover:opacity-50">Contact Us</a>
+       
         <div className="lg:hidden">
             <button onClick={toggleMobileMenu}>
                 {isMobileMenuOpen ? <FaTimes/> : <FaBars/>}
