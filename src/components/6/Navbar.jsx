@@ -1,9 +1,8 @@
 import { useState } from "react";
-import logo from "../../assets/logo.png";
-import {LINKS} from "../../constants"
+import logo from "/src/assets/logo.png";
+import {LINKS} from "/src/constants"
 import { FaTimes } from "react-icons/fa";
 import { FaBars } from "react-icons/fa6";
-
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

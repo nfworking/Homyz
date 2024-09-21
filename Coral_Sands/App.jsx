@@ -2,6 +2,7 @@ import HeroSection from "../src/components/3/HeroSection"
 import Navbar from "../src/components/3/Navbar"
 import Footer from "../src/components/3/Footer"
 import ContactSection from "../src/components/ContactSection"
+import ProductPage from "../src/components/3/HousePage"
 
 
 
@@ -10,7 +11,7 @@ const App = () => {
     <div className="overflow-y-hidden text-neutral-200">
       <HeroSection/>
       <Navbar />
-      <Footer/>
+      <ProductPage/>
       <ContactSection/>
       <Footer/>
     </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Star, Check, ChevronLeft, ChevronRight } from 'lucide-react';
+import { loadStripe } from "@stripe/stripe-js";
 
 const images = [
   "https://www.eliteholidayhomes.com.au/wp-content/uploads/2022/03/Mexicali-1-1024x686.jpg",
@@ -8,7 +9,48 @@ const images = [
   "https://www.eliteholidayhomes.com.au/wp-content/uploads/2022/03/007_Open2view_ID784672-4_Mexicali_Court-1024x684.jpg",
 ];
 
-export default function ProductPage() {
+let stripePromise;
+
+const getStripe = () => {
+  if (!stripePromise) {
+    stripePromise = loadStripe("pk_test_51Q14DCBbdnBm0oLBocCS6TYkHpKd5FXNaV6vp0ZN35CqGPjMWQQjGsEqkQpa1bgibxPlfdhrjAPysgCuFIx6eoSp00fjtWGmfj");
+  }
+
+  return stripePromise;
+};
+
+const ProductPage = () => {
+  const [stripeError, setStripeError] = useState(null);
+  const [isLoading, setLoading] = useState(false);
+  const item = {
+    price: "price_1Q14EgBbdnBm0oLBPcbp28II",
+    quantity: 1
+  };
+
+  const checkoutOptions = {
+    lineItems: [item],
+    mode: "payment",
+    successUrl: `${window.location.origin}/success`,
+    cancelUrl: `${window.location.origin}/cancel`
+  };
+
+  const redirectToCheckout = async () => {
+    setLoading(true);
+    console.log("redirectToCheckout");
+
+    const stripe = await getStripe();
+    const { error } = await stripe.redirectToCheckout(checkoutOptions);
+    console.log("Stripe checkout error", error);
+
+    if (error) setStripeError(error.message);
+    setLoading(false);
+  };
+
+  if (stripeError) alert(stripeError);
+
+
+
+
   const [currentImage, setCurrentImage] = useState(0);
 
   const nextImage = () => {
@@ -124,17 +166,20 @@ export default function ProductPage() {
             <div className="mt-8 flex flex-col space-y-4">
               <button
                 type="button"
+                onClick={redirectToCheckout}
                 className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-150 ease-in-out"
               >
-                Add to cart
+                Place a Deposit 
               </button>
-              <p className="text-sm text-gray-400 text-center">
-                Free shipping on orders over $100
-              </p>
+              
+
             </div>
           </div>
         </div>
       </div>
     </div>
   );
+
 }
+
+export default ProductPage;
