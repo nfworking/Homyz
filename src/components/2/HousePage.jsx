@@ -3,11 +3,12 @@ import { Star, Check, ChevronLeft, ChevronRight } from 'lucide-react';
 import { loadStripe } from "@stripe/stripe-js";
 
 const images = [
-  "https://www.eliteholidayhomes.com.au/wp-content/uploads/2022/03/Mexicali-1-1024x686.jpg",
-  "https://www.eliteholidayhomes.com.au/wp-content/uploads/2022/03/006_Open2view_ID784672-4_Mexicali_Court-1024x684.jpg",
-  "https://www.eliteholidayhomes.com.au/wp-content/uploads/2022/03/005_Open2view_ID784672-4_Mexicali_Court-1024x684.jpg",
-  "https://www.eliteholidayhomes.com.au/wp-content/uploads/2022/03/007_Open2view_ID784672-4_Mexicali_Court-1024x684.jpg",
+  "/water1.png",
+  "/water2.png",
+  "/water3.png",
+  "/water4.png",
 ];
+
 
 let stripePromise;
 
@@ -102,10 +103,10 @@ const ProductPage = () => {
 
           {/* Product Info */}
           <div className="mt-10 px-4 sm:px-0 sm:mt-16 lg:mt-0">
-            <h1 className="text-3xl font-extrabold tracking-tight">Premium Wireless Headphones</h1>
+            <h1 className="text-3xl font-extrabold tracking-tight">Coobowie Waters</h1>
             <div className="mt-3">
-              <h2 className="sr-only">Product information</h2>
-              <p className="text-3xl text-gray-200">$299.99</p>
+         
+              <p className="text-3xl text-gray-200">$499,00,00</p>
             </div>
 
             {/* Rating */}
@@ -133,9 +134,7 @@ const ProductPage = () => {
             <div className="mt-6">
               <h3 className="sr-only">Description</h3>
               <p className="text-base text-gray-300">
-                Experience unparalleled sound quality with our Premium Wireless Headphones. 
-                Featuring advanced noise-cancellation technology and long-lasting battery life, 
-                these headphones are perfect for music enthusiasts and professionals alike.
+              Coobowie Waters is a luxurious suburban home that exudes elegance and comfort in every detail. With spacious living areas filled with natural light, the property offers a perfect setting for both relaxation and entertaining. The beautifully landscaped garden and outdoor spaces provide a serene escape, while high-end finishes throughout enhance the sophisticated atmosphere. This stunning residence is ideal for those seeking a blend of modern luxury and peaceful suburban living.
               </p>
             </div>
 
@@ -143,10 +142,10 @@ const ProductPage = () => {
               <h3 className="text-sm font-medium text-gray-200">Highlights</h3>
               <div className="mt-4">
                 <ul role="list" className="pl-4 list-disc space-y-2">
-                  <li className="text-sm text-gray-300">40 hours of battery life</li>
-                  <li className="text-sm text-gray-300">Active Noise Cancellation</li>
-                  <li className="text-sm text-gray-300">Bluetooth 5.0 connectivity</li>
-                  <li className="text-sm text-gray-300">High-fidelity sound with aptX codec</li>
+                  <li className="text-sm text-gray-300">Expansive, light-filled living areas</li>
+                  <li className="text-sm text-gray-300">Beautifully landscaped garden with outdoor seating</li>
+                  <li className="text-sm text-gray-300">High-end finishes and modern design elements</li>
+                  <li className="text-sm text-gray-300">Close proximity to local amenities and beaches</li>
                 </ul>
               </div>
             </div>
@@ -154,7 +153,7 @@ const ProductPage = () => {
             <div className="mt-8">
               <h3 className="text-sm font-medium text-gray-200">In the box</h3>
               <div className="mt-4 space-y-2">
-                {['Headphones', 'Carrying case', 'USB-C charging cable', '3.5mm audio cable'].map((item) => (
+                {['Premium appliances in a gourmet kitchen', 'Smart home technology for security and convenience', 'Custom cabinetry and high-quality furnishings', 'Outdoor entertainment setup, including a BBQ area'].map((item) => (
                   <div key={item} className="flex items-center">
                     <Check className="h-5 w-5 text-green-500" aria-hidden="true" />
                     <p className="ml-3 text-sm text-gray-300">{item}</p>

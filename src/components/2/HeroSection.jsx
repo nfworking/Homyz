@@ -1,4 +1,4 @@
-import video from "/src/assets/hero.mp4";
+import video from "/src/assets/house-2.mp4";
 import hero from "/src/assets/thumbnail.png";
 import { motion } from "framer-motion";
 

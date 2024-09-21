@@ -1,6 +1,7 @@
-import dish1 from "../assets/dish1.jpeg";
-import dish2 from "../assets/dish2.jpeg";
-import dish3 from "../assets/dish3.jpeg";
+import dish1 from "/casa1.png";
+import dish2 from "/water1.png";
+import dish3 from "/casa3.png";
+
 import dish4 from "../assets/dish4.jpeg";
 import dish5 from "../assets/dish5.jpeg";
 import dish6 from "../assets/dish6.jpeg";
@@ -23,11 +24,16 @@ export const LINKS = [
   { text: "Contact", targetId: "contact" },
 ];
 
+export const LINKS_SINGLE = [
+  { text: "Home", targetId: "/" },
+ 
+];
+
 export const DISHES = [
   {
     image: dish1,
-    title: "Spaghetti Carbonara",
-    description: "Creamy pasta with bacon and cheese",
+    title: "Casa Mexicali",
+    description: "Spectacular 3 bedroom home with a pool and a view of the ocean",
     forward: "/Casa_Mexicali/",
   },
   {
