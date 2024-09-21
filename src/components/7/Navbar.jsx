@@ -1,6 +1,6 @@
 import { useState } from "react";
-import logo from "../assets/logo.png";
-import {LINKS} from "../constants"
+import logo from "/src/assets/logo.png";
+import {LINKS} from "/src/constants"
 import { FaTimes } from "react-icons/fa";
 import { FaBars } from "react-icons/fa6";
 
@@ -32,10 +32,8 @@ const Navbar = () => {
                 <a key={index} href={`#s{link.targetId}`} className={`text-sm ${index !== 0 ? "border-l-2 border-neutral-300/20 pl-2" : ""} hover:opacity-50`} onClick={(e) => handleScroll (e, link.targetId) }>
                     {link.text}
                 </a>
-               
             ))}
         </div>
-        <a href="/Contact_Us/" className="text-sm hover:opacity-50">Contact Us</a>
         <div className="lg:hidden">
             <button onClick={toggleMobileMenu}>
                 {isMobileMenuOpen ? <FaTimes/> : <FaBars/>}

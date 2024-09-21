@@ -22,6 +22,7 @@ export default defineConfig({
         information4: resolve(root, 'Coral_Sands', 'index.html'),
         information5: resolve(root, 'The_Lotus', 'index.html'),
         information6: resolve(root, 'Haven_On_Holland', 'index.html'),
+        information7: resolve(root, 'Contact_Us', 'index.html'),
       }
     }
   }

@@ -21,8 +21,7 @@ export const LINKS = [
   { text: "About", targetId: "about" },
   { text: "Mission", targetId: "mission" },
   { text: "Review", targetId: "review" },
-  { text: "Contact", targetId: "contact" },
-];
+]
 
 export const LINKS_SINGLE = [
   { text: "Home", targetId: "/" },
