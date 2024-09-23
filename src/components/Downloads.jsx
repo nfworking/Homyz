@@ -2,8 +2,8 @@
 
 export default function Downloads() {
   const downloads = [
-    { name: "Windows", url: "https://media.githubusercontent.com/media/nfworking/realestate-v3/refs/heads/main/public/realestatenative.exe?download=true" },
-    { name: "Mac",  url: "/realestatenative.dmg" },
+    { name: "Windows", reason: "Check out the project on GitHub", url: "https://github.com/nfworking/realestate-v3" },
+    { name: "Mac", reason: "Check out the project on GitHub", url: "https://github.com/nfworking/realestate-v3" },
   ]
 
   return (
@@ -19,7 +19,8 @@ export default function Downloads() {
               <div className="flex flex-col items-center text-white">
                
                 <h2 className="text-2xl font-bold mb-2">{download.name}</h2>
-                <p className="text-gray-400">Download for {download.name}</p>
+                <p className="text-gray-400">In development</p>
+                <p href={download.url} className="text-gray-400"> {download.reason}</p>
               </div>
             </a>
           </div>
