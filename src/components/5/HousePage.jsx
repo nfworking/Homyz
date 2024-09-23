@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Star, Check, ChevronLeft, ChevronRight } from 'lucide-react';
 import { loadStripe } from "@stripe/stripe-js";
 import { PAYMENT_SUCCESS, PAYMENT_DECLINE } from "../../constants";
+import {MapContainer, TileLayer,} from 'react-leaflet';
+import GeoCoderMarker from "../1/MapMarker";
 
 const images = [
   "https://www.eliteholidayhomes.com.au/wp-content/uploads/2022/03/Mexicali-1-1024x686.jpg",
@@ -99,6 +101,20 @@ const ProductPage = () => {
                 />
               ))}
             </div>
+            <h1 className='text-3xl mt-10 flex justify-center items-center bg-black tracking-wider'>The Location</h1>
+            <div className='bg-black'>
+            <MapContainer
+        center={[-28.0206097, 153.415578]}
+        zoom={9}
+        scrollWheelZoom={true}
+        className='h-[40vh] w-[100%] rounded-2% bg-black mt-8 '
+       
+        >
+            <TileLayer className='mt-8' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+           <GeoCoderMarker address={'${address} ${city} ${country}'} />
+           
+          </MapContainer>
+          </div>
           </div>
 
           {/* Product Info */}
