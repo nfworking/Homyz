@@ -1,5 +1,5 @@
 
-# Homyz Website
+# Homyz Website Repo
 
 The Official Repo for Homyz Website
 
