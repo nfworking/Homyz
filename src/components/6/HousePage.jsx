@@ -15,7 +15,7 @@ let stripePromise;
 
 const getStripe = () => {
   if (!stripePromise) {
-    stripePromise = loadStripe("pk_test_51Q14DCBbdnBm0oLBocCS6TYkHpKd5FXNaV6vp0ZN35CqGPjMWQQjGsEqkQpa1bgibxPlfdhrjAPysgCuFIx6eoSp00fjtWGmfj");
+    stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
   }
 
   return stripePromise;
@@ -25,7 +25,7 @@ const ProductPage = () => {
   const [stripeError, setStripeError] = useState(null);
   const [isLoading, setLoading] = useState(false);
   const item = {
-    price: "price_1Q14EgBbdnBm0oLBPcbp28II",
+    price: import.meta.env.VITE_PRODUCT_ID,
     quantity: 1
   };
 

@@ -27,7 +27,7 @@ const ProductPage = () => {
   const [stripeError, setStripeError] = useState(null);
   const [isLoading, setLoading] = useState(false);
   const item = {
-    price: "price_1Q262QBbdnBm0oLBqGIoeu9J",
+    price: import.meta.env.VITE_PRODUCT_ID,
     quantity: 1
   };
 

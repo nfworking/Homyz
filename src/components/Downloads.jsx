@@ -2,7 +2,7 @@
 
 export default function Downloads() {
   const downloads = [
-    { name: "Windows", reason: "Check out the project on GitHub", url: "https://github.com/nfworking/Homyz-Client" },
+    { name: "Windows", reason: "Available for download now!", url: "https://github.com/nfworking/Shoreline-Client/raw/refs/heads/main/Shoreline-x64.7z?download=true" },
     { name: "Mac", reason: "Check out the project on GitHub", url: "https://github.com/nfworking/Homyz-Client" },
   ]
 
@@ -20,7 +20,7 @@ export default function Downloads() {
                
                 <h2 className="text-2xl font-bold mb-2">{download.name}</h2>
                 <p className="text-gray-400">In development</p>
-                <p href={download.url} className="text-gray-400"> {download.reason}</p>
+                <p className="text-gray-400"> {download.reason}</p>
               </div>
             </a>
           </div>

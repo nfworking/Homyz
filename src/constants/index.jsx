@@ -81,11 +81,11 @@ export const DISHES = [
 export const ABOUT = {
   header: "We love making dreams come true!",
   content:
-    "At Homyz, we believe in making dreams come true no matter how big or small. Wether you need a home for you older one or a home for a large family, we have several luxry homes avaiable for you. We can help you with what ever needs you have. Any questions? Let us know!",
+    "At Shorline, we believe in making dreams come true no matter how big or small. Wether you need a home for you older one or a home for a large family, we have several luxry homes avaiable for you. We can help you with what ever needs you have. Any questions? Let us know!",
 };
 
 export const MISSION =
-  "At Homyz, our mission is to provide the best customer experience to our clients";
+  "At Shorline, our mission is to provide the best customer experience to our clients";
 
 export const CUSINES = [
   {
@@ -115,13 +115,13 @@ export const REVIEW = {
   name: "Chris Hemsworth",
   profession: "Exclusive Billonare",
   content:
-    "“I had a fantastic experience with Homyz. Their team is professional, knowledgeable, and dedicated to making the home buying process smooth. They took the time to understand my needs and provided clear, transparent advice throughout. Their customer service is exceptional—always available and incredibly helpful. Plus, their online tools made the process even easier. I highly recommend Homyz for anyone looking to buy or sell a home. Thanks to them, I found my dream home effortlessly!.”",
+    "“I had a fantastic experience with Shorline. Their team is professional, knowledgeable, and dedicated to making the home buying process smooth. They took the time to understand my needs and provided clear, transparent advice throughout. Their customer service is exceptional—always available and incredibly helpful. Plus, their online tools made the process even easier. I highly recommend Shorline for anyone looking to buy or sell a home. Thanks to them, I found my dream home effortlessly!.”",
 };
 
 export const CONTACT = [
   { key: "address", value: "Address: 1432 Great Ocean Drive, Australia" },
   { key: "phone", value: "Phone: 1432-386-2986" },
-  { key: "email", value: "Email: hi@homyz.com" },
+  { key: "email", value: "Email: info@shorlinehomes.com" },
 ];
 
 export const SOCIAL_MEDIA_LINKS = [
