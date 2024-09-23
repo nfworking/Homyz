@@ -2,8 +2,8 @@
 
 export default function Downloads() {
   const downloads = [
-    { name: "Windows", reason: "Check out the project on GitHub", url: "https://github.com/nfworking/realestate-v3" },
-    { name: "Mac", reason: "Check out the project on GitHub", url: "https://github.com/nfworking/realestate-v3" },
+    { name: "Windows", reason: "Check out the project on GitHub", url: "https://github.com/nfworking/Homyz-Client" },
+    { name: "Mac", reason: "Check out the project on GitHub", url: "https://github.com/nfworking/Homyz-Client" },
   ]
 
   return (
