@@ -1,7 +1,7 @@
 
-# Homyz Website Repo
+# Shorline Website Repo
 
-The Official Repo for Homyz Website
+The Official Repo for Shorline Website
 
 
 
