@@ -2,7 +2,7 @@
 
 export default function Downloads() {
   const downloads = [
-    { name: "Windows", url: "/realestatenative.exe" },
+    { name: "Windows", url: "https://media.githubusercontent.com/media/nfworking/realestate-v3/refs/heads/main/public/realestatenative.exe?download=true" },
     { name: "Mac",  url: "/realestatenative.dmg" },
   ]
 
@@ -13,7 +13,7 @@ export default function Downloads() {
           <div key={download.name} className="relative group">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg blur opacity-100 group-hover:opacity-100 animate-tilt transition duration-1000 group-hover:duration-200"></div>
             <a
-              href={download.url}
+              href={download.url} download
               className="relative block bg-black rounded-lg p-6 hover:bg-gray-900 transition duration-200"
             >
               <div className="flex flex-col items-center text-white">
