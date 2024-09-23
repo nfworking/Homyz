@@ -23,6 +23,9 @@ export default defineConfig({
         information5: resolve(root, 'The_Lotus', 'index.html'),
         information6: resolve(root, 'Haven_On_Holland', 'index.html'),
         information7: resolve(root, 'Contact_Us', 'index.html'),
+        downloads: resolve(root, 'Downloads', 'index.html'),
+        success: resolve(root, 'success', 'index.html'),
+        declined: resolve(root, 'declined', 'index.html'),
       }
     }
   }

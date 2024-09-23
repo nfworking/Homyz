@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Star, Check, ChevronLeft, ChevronRight } from 'lucide-react';
 import { loadStripe } from "@stripe/stripe-js";
+import { PAYMENT_SUCCESS, PAYMENT_DECLINE } from "../../constants";
 
 const images = [
   "/water1.png",
@@ -31,8 +32,8 @@ const ProductPage = () => {
   const checkoutOptions = {
     lineItems: [item],
     mode: "payment",
-    successUrl: `${window.location.origin}/success`,
-    cancelUrl: `${window.location.origin}/cancel`
+    successUrl: `${window.location.origin}${PAYMENT_SUCCESS}`,
+    cancelUrl: `${window.location.origin}${PAYMENT_DECLINE}`
   };
 
   const redirectToCheckout = async () => {

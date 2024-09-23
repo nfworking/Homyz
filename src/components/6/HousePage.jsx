@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Star, Check, ChevronLeft, ChevronRight } from 'lucide-react';
 import { loadStripe } from "@stripe/stripe-js";
-
+import { PAYMENT_SUCCESS, PAYMENT_DECLINE } from "../../constants";
 const images = [
   "https://www.eliteholidayhomes.com.au/wp-content/uploads/2022/03/Mexicali-1-1024x686.jpg",
   "https://www.eliteholidayhomes.com.au/wp-content/uploads/2022/03/006_Open2view_ID784672-4_Mexicali_Court-1024x684.jpg",
@@ -30,8 +30,8 @@ const ProductPage = () => {
   const checkoutOptions = {
     lineItems: [item],
     mode: "payment",
-    successUrl: `${window.location.origin}/success`,
-    cancelUrl: `${window.location.origin}/cancel`
+    successUrl: `${window.location.origin}${PAYMENT_SUCCESS}`,
+    cancelUrl: `${window.location.origin}${PAYMENT_DECLINE}`
   };
 
   const redirectToCheckout = async () => {

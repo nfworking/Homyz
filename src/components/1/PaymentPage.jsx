@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
+import { PAYMENT_SUCCESS, PAYMENT_DECLINE } from "../../constants";
+
 
 
 
@@ -28,8 +30,8 @@ const Checkout = () => {
   const checkoutOptions = {
     lineItems: [item],
     mode: "payment",
-    successUrl: `${window.location.origin}/success`,
-    cancelUrl: `${window.location.origin}/cancel`
+    successUrl: `${window.location.origin}/success/`,
+    cancelUrl: `${window.location.origin}/declined/`
   };
 
   const redirectToCheckout = async () => {

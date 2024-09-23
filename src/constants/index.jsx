@@ -35,6 +35,9 @@ export const LINKS_SINGLE = [
  
 ];
 
+export const PAYMENT_SUCCESS = [ "/success/"]
+export const PAYMENT_DECLINE = [ "/decline/"]
+
 export const DISHES = [
   {
     image: dish1,

@@ -14,7 +14,7 @@ let stripePromise;
 
 const getStripe = () => {
   if (!stripePromise) {
-    stripePromise = loadStripe("pk_test_51Q14DCBbdnBm0oLBocCS6TYkHpKd5FXNaV6vp0ZN35CqGPjMWQQjGsEqkQpa1bgibxPlfdhrjAPysgCuFIx6eoSp00fjtWGmfj");
+    stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
   }
 
   return stripePromise;
@@ -31,8 +31,8 @@ const ProductPage = () => {
   const checkoutOptions = {
     lineItems: [item],
     mode: "payment",
-    successUrl: `${window.location.origin}/success`,
-    cancelUrl: `${window.location.origin}/cancel`
+    successUrl: `${window.location.origin}${import.meta.env.VITE_SUCCESS_URL}`,
+    cancelUrl: `${window.location.origin}${import.meta.env.VITE_CANCEL_URL}`
   };
 
   const redirectToCheckout = async () => {
