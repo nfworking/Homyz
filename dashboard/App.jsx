@@ -1,4 +1,4 @@
-import LoginPage from "./login"
+import LoginPage from "../src/components/login"
 import { Auth0Provider } from '@auth0/auth0-react';
 
 
