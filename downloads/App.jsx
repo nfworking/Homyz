@@ -1,7 +1,7 @@
 import LoginPage from "./login"
-import Footer from "../components/Footer"
-import Navbar from "../components/Navbar"
-import ContactSection from "../components/ContactSection"
+import Footer from "../src/components/Footer"
+import Navbar from "../src/components/Navbar"
+import ContactSection from "../src/components/ContactSection"
 import Downloads from "../src/components/Downloads"
 
 
