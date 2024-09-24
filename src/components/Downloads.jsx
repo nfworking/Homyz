@@ -2,8 +2,8 @@
 
 export default function Downloads() {
   const downloads = [
-    { name: "Windows", reason: "Available for download now!", url: "https://github.com/nfworking/Shoreline-Client/raw/refs/heads/main/Shoreline-x64.7z?download=true" },
-    { name: "Mac", reason: "Check out the project on GitHub", url: "https://github.com/nfworking/Homyz-Client" },
+    { name: "Windows", progress: "Ready for download", reason: "Available for download now!", url: "https://github.com/nfworking/Shoreline-Client/raw/refs/heads/main/Shoreline-x64.7z?download=true" },
+    { name: "Mac",  progress: "In development", reason: "Check out the project on GitHub", url: "https://github.com/nfworking/Homyz-Client" },
   ]
 
   return (
@@ -19,7 +19,7 @@ export default function Downloads() {
               <div className="flex flex-col items-center text-white">
                
                 <h2 className="text-2xl font-bold mb-2">{download.name}</h2>
-                <p className="text-gray-400">In development</p>
+                <p className="text-gray-400">{download.progress}</p>
                 <p className="text-gray-400"> {download.reason}</p>
               </div>
             </a>
