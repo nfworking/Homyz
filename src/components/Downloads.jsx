@@ -3,7 +3,7 @@ import {  Check } from "lucide-react"
 
 const GradientBorder = ({ children }) => (
   <div className="relative">
-    <div className="absolute inset-0 rounded-lg border-2 border-gradient-to-r from-pink-500 via-purple-500 to-blue-500" />
+    <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500" />
     <div className="relative bg-black m-[2px] rounded-lg overflow-hidden">
       {children}
     </div>
