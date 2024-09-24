@@ -26,6 +26,7 @@ export default defineConfig({
         downloads: resolve(root, 'downloads', 'index.html'),
         success: resolve(root, 'success', 'index.html'),
         declined: resolve(root, 'declined', 'index.html'),
+        dashboard: resolve(root, 'dashboard', 'index.html'),
       }
     }
   }
