@@ -1,11 +1,29 @@
 import React, { useState } from 'react'
 import { useAuth0 } from '@auth0/auth0-react'
 import PropTypes from 'prop-types'
+import Subscriptions from './Subsription'
+import PropertyViewHistory from './PropertyHistory'
+import AccountInformation from './AccountInformation'
+
 
 export default function LoginPage() {
   const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [activeTab, setActiveTab] = useState('subscriptions');
+
+  const renderTabContent = () => {
+    switch (activeTab) {
+      case 'subscriptions':
+        return <Subscriptions />;
+      case 'viewHistory':
+        return <PropertyViewHistory />;
+      case 'accountInfo':
+        return <AccountInformation />;
+      default:
+        return null;
+    }
+  };
 
   const handleLogin = (e) => {
     e.preventDefault()
@@ -14,17 +32,46 @@ export default function LoginPage() {
 
   if (isAuthenticated) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-black text-white">
-        <div className="text-center">
-          <h2 className="text-2xl mb-4">Welcome, {user?.name}!</h2>
+      <div style={{ backgroundColor: 'black', color: 'white', minHeight: '100vh', padding: '20px' }}>
+      <h1>Welcome, {user?.name}</h1>
+      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px' }}>
+        <div>
           <button
-            onClick={() => logout({ returnTo: window.location.origin })}
-            className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+            onClick={() => setActiveTab('subscriptions')}
+            style={{ backgroundColor: activeTab === 'subscriptions' ? '#333' : 'black', color: 'white', padding: '10px', marginRight: '10px', border: 'none', cursor: 'pointer' }}
           >
-            Log Out
+            Subscriptions
+          </button>
+          <button
+            onClick={() => setActiveTab('viewHistory')}
+            style={{ backgroundColor: activeTab === 'viewHistory' ? '#333' : 'black', color: 'white', padding: '10px', marginRight: '10px', border: 'none', cursor: 'pointer' }}
+          >
+            View History
+          </button>
+          <button
+            onClick={() => setActiveTab('accountInfo')}
+            style={{ backgroundColor: activeTab === 'accountInfo' ? '#333' : 'black', color: 'white', padding: '10px', marginRight: '10px', border: 'none', cursor: 'pointer' }}
+          >
+            Account Info
+          </button>
+          <button
+            onClick={() => setActiveTab('likedProperties')}
+            style={{ backgroundColor: activeTab === 'likedProperties' ? '#333' : 'black', color: 'white', padding: '10px', marginRight: '10px', border: 'none', cursor: 'pointer' }}
+          >
+            Liked Properties
           </button>
         </div>
+        <button
+          onClick={() => logout({ returnTo: window.location.origin })}
+          style={{ backgroundColor: 'red', color: 'white', padding: '10px', border: 'none', cursor: 'pointer' }}
+        >
+          Logout
+        </button>
       </div>
+      <div>
+        {renderTabContent()}
+      </div>
+    </div>
     )
   }
 
