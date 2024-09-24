@@ -38,18 +38,21 @@ export default function LoginPage() {
         <div>
           <button
             onClick={() => setActiveTab('subscriptions')}
+            className='bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm transition duration-300 ease-in-out'
             style={{ backgroundColor: activeTab === 'subscriptions' ? '#333' : 'black', color: 'white', padding: '10px', marginRight: '10px', border: 'none', cursor: 'pointer' }}
           >
             Subscriptions
           </button>
           <button
             onClick={() => setActiveTab('viewHistory')}
+            className='bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm transition duration-300 ease-in-out'
             style={{ backgroundColor: activeTab === 'viewHistory' ? '#333' : 'black', color: 'white', padding: '10px', marginRight: '10px', border: 'none', cursor: 'pointer' }}
           >
             View History
           </button>
           <button
             onClick={() => setActiveTab('accountInfo')}
+            className='bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm transition duration-300 ease-in-out'
             style={{ backgroundColor: activeTab === 'accountInfo' ? '#333' : 'black', color: 'white', padding: '10px', marginRight: '10px', border: 'none', cursor: 'pointer' }}
           >
             Account Info
