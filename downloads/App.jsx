@@ -13,7 +13,7 @@ const App = () => {
 <Auth0Provider
       domain="dev-2dfpa0wa7iini3i4.us.auth0.com"
       clientId="YNk9dVv6qv2KNjlXAz7Y75KDGgmtn0De"
-      redirectUri={window.location.origin}
+      redirectUri="http://shorline.vercel.app/downloads/"
     >
        <LoginPage/>
       {/* Your app components */}
