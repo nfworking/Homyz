@@ -55,7 +55,7 @@ const UserDashboard = () => {
   };
 
   return (
-    <><div className="min-h-screen bg-gray-100 p-8">
+    <><div className="min-h-screen bg-black p-8">
           <div className="max-w-4xl mx-auto">
               <div className="bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 p-1 rounded-lg">
                   <div className="bg-black rounded-lg">
