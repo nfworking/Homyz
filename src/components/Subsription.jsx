@@ -9,12 +9,10 @@ const sampleSubscriptions = [
 
 export default function Subscriptions() {
   return (
-    <div className="bg-black text-white min-h-screen p-6">
-      <h2 className="text-2xl font-bold mb-6 pb-2 border-b border-gray-700">Your Subscriptions</h2>
+    <div className="bg-black text-white min-h-screen p-6 px-6 mr-9">
       <div className="space-y-6">
         {sampleSubscriptions.map((subscription) => (
-          <div key={subscription.id} className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-red-500 via-yellow-500 to-orange-500 rounded-lg"></div>
+          <div key={subscription.id} className="relative bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 p-0.5   rounded-lg">
             <div className="relative bg-gray-900 rounded-lg p-6 m-[2px]">
               <div className="flex justify-between items-start">
                 <div>
@@ -29,24 +27,14 @@ export default function Subscriptions() {
                 </span>
               </div>
               <div className="mt-4 flex justify-end space-x-2">
-                <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded transition duration-300 ease-in-out">
-                  Manage
-                </button>
-                {subscription.status === 'Active' && (
-                  <button className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded transition duration-300 ease-in-out">
-                    Cancel
-                  </button>
-                )}
+               
+              
               </div>
             </div>
           </div>
         ))}
       </div>
-      <div className="mt-8">
-        <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition duration-300 ease-in-out">
-          Add New Subscription
-        </button>
-      </div>
+      
     </div>
   );
 }

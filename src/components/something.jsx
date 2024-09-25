@@ -21,18 +21,18 @@ const UserDashboard = () => {
           <div className="bg-black rounded-lg shadow-md p-6">
             <div className="flex items-center mb-4">
               <img
-                src={user?.picture}
+                src={user.picture}
                 alt="Profile"
                 className="w-16 h-16 rounded-full mr-4"
               />
-              <div>
+              <div className=' backdrop-blur-lg bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 p-1 py-6 px-6 rounded-lg'>
                 <h2 className="text-2xl font-bold">{user?.name}</h2>
                 <p className="text-white">{user?.email}</p>
               </div>
             </div>
             <div className="bg-black rounded-lg p-4">
               <h3 className="text-xl font-semibold mb-2">Liked Houses</h3>
-              <p className="text-3xl font-bold text-blue-600">4</p>
+              <p className="text-3xl font-bold text-white">4</p>
             </div>
           </div>
         );
@@ -60,21 +60,21 @@ const UserDashboard = () => {
   return (
     <div className="min-h-screen bg-black p-8">
           <div className="max-w-4xl mx-auto">
-              <div className="bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 p-1 rounded-lg">
+              <div className="bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 p-1 rounded-lg">
                   <div className="bg-black rounded-lg">
                   <button
           onClick={() => logout({ returnTo: window.location.origin })}
-          className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+          className="bg-blue-600 mt-8 ml-8 mb-8 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
       >
               Log Out
           </button>
-                      <div className="flex border-b">
+                      <div className="flex  ">
                           {['home', 'billing', 'history'].map((tab) => (
                               <button
                                   key={tab}
                                   className={`px-4 py-2 font-semibold ${activeTab === tab
-                                          ? 'text-blue-600 border-b-2 border-blue-600'
-                                          : 'text-gray-600 hover:text-blue-600 transition duration-300 ease-in-out`'}`}
+                                          ? 'text-white border-b-2 border-pink-600'
+                                          : 'text-white hover:text-blue-600 transition duration-300 ease`'}`}
                                   onClick={() => setActiveTab(tab)}
                               >
                                   {tab.charAt(0).toUpperCase() + tab.slice(1)}

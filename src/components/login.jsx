@@ -5,7 +5,7 @@ import Subscriptions from './Subsription'
 import PropertyViewHistory from './PropertyHistory'
 import AccountInformation from './AccountInformation'
 import UserDashboard from './something'
-
+import HeroSection from './HeroSection'
 export default function LoginPage() {
   const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0()
   const [email, setEmail] = useState('')
@@ -23,20 +23,22 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-black">
+
+   <div className="min-h-screen flex items-center justify-center bg-black">
       <div className="bg-gray-900 p-8 rounded-lg shadow-xl w-96">
         <h1 className="text-3xl font-bold mb-6 text-center text-white">Login</h1>
-       
+
         <div className="mt-4 text-center">
           <button
             onClick={() => loginWithRedirect()}
-            className="text-sm text-blue-400 hover:text-blue-500"
+            className=" text-white/300 hover:text-blue-500 bg-black border-2 border-blue-400 px-8 py-8 rounded-lg hover:bg-blue-400 hover:border-blue-500 hover:text-white transition duration-300 ease-in-out hover:scale-105"
           >
             Sign in with Auth0
           </button>
         </div>
       </div>
     </div>
+
   )
 }
 
