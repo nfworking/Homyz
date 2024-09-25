@@ -1,53 +1,52 @@
 import React from 'react';
 
+// Sample subscription data
 const sampleSubscriptions = [
-    { id: 1, name: 'Basic Plan', price: 9.99, renewalDate: '2023-12-01', status: 'Active' },
-    { id: 2, name: 'Premium Plan', price: 19.99, renewalDate: '2024-01-15', status: 'Active' },
-    { id: 3, name: 'Property Alerts', price: 4.99, renewalDate: '2023-11-30', status: 'Cancelled' },
-  ];
-  
-  export default function Subscriptions() {
-    return (
-      <div style={{ backgroundColor: 'black', color: 'white', padding: '20px' }}>
-        <h2 style={{ borderBottom: '1px solid #333', paddingBottom: '10px' }}>Your Subscriptions</h2>
+  { id: 1, name: 'Basic Plan', price: 9.99, renewalDate: '2023-12-01', status: 'Active' },
+  { id: 2, name: 'Premium Plan', price: 19.99, renewalDate: '2024-01-15', status: 'Active' },
+  { id: 3, name: 'Property Alerts', price: 4.99, renewalDate: '2023-11-30', status: 'Cancelled' },
+];
+
+export default function Subscriptions() {
+  return (
+    <div className="bg-black text-white min-h-screen p-6">
+      <h2 className="text-2xl font-bold mb-6 pb-2 border-b border-gray-700">Your Subscriptions</h2>
+      <div className="space-y-6">
         {sampleSubscriptions.map((subscription) => (
-          <div key={subscription.id} style={{ 
-            backgroundColor: '#111', 
-            margin: '10px 0', 
-            padding: '15px', 
-            borderRadius: '5px',
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center'
-          }}>
-            <div>
-              <h3 style={{ margin: '0 0 10px 0' }}>{subscription.name}</h3>
-              <p style={{ margin: '5px 0', color: '#aaa' }}>Price: ${subscription.price.toFixed(2)}/month</p>
-              <p style={{ margin: '5px 0', color: '#aaa' }}>Renewal Date: {subscription.renewalDate}</p>
-            </div>
-            <div>
-              <span style={{ 
-                backgroundColor: subscription.status === 'Active' ? 'green' : 'red',
-                padding: '5px 10px',
-                borderRadius: '15px',
-                fontSize: '0.8em'
-              }}>
-                {subscription.status}
-              </span>
+          <div key={subscription.id} className="relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-red-500 via-yellow-500 to-orange-500 rounded-lg"></div>
+            <div className="relative bg-gray-900 rounded-lg p-6 m-[2px]">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">{subscription.name}</h3>
+                  <p className="text-gray-400">Price: ${subscription.price.toFixed(2)}/month</p>
+                  <p className="text-gray-400">Renewal Date: {subscription.renewalDate}</p>
+                </div>
+                <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                  subscription.status === 'Active' ? 'bg-green-500 text-green-100' : 'bg-red-500 text-red-100'
+                }`}>
+                  {subscription.status}
+                </span>
+              </div>
+              <div className="mt-4 flex justify-end space-x-2">
+                <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded transition duration-300 ease-in-out">
+                  Manage
+                </button>
+                {subscription.status === 'Active' && (
+                  <button className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded transition duration-300 ease-in-out">
+                    Cancel
+                  </button>
+                )}
+              </div>
             </div>
           </div>
         ))}
-        <button style={{
-          backgroundColor: '#0066cc',
-          color: 'white',
-          border: 'none',
-          padding: '10px 15px',
-          borderRadius: '5px',
-          cursor: 'pointer',
-          marginTop: '20px'
-        }}>
-          Manage Subscriptions
+      </div>
+      <div className="mt-8">
+        <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition duration-300 ease-in-out">
+          Add New Subscription
         </button>
       </div>
-    );
-  }
+    </div>
+  );
+}
