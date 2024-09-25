@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
-
+import Subscriptions from './Subsription';
+import PropertyViewHistory from './PropertyHistory';
 const UserDashboard = () => {
   const { user, isAuthenticated, isLoading, logout } = useAuth0();
   const [activeTab, setActiveTab] = useState('home');
@@ -40,6 +41,7 @@ const UserDashboard = () => {
           <div className="bg-black rounded-lg shadow-md p-6">
             <h2 className="text-2xl font-bold mb-4">Billing / Subscription</h2>
             <p>Your subscription details and billing information will appear here.</p>
+            <Subscriptions />
           </div>
         );
       case 'history':
@@ -47,6 +49,7 @@ const UserDashboard = () => {
           <div className="bg-black rounded-lg shadow-md p-6">
             <h2 className="text-2xl font-bold mb-4">Property History</h2>
             <p>Your property viewing and interaction history will appear here.</p>
+            <PropertyViewHistory />
           </div>
         );
       default:
