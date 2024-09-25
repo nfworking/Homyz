@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 
 const UserDashboard = () => {
-  const { user, isAuthenticated, isLoading } = useAuth0();
+  const { user, isAuthenticated, isLoading, logout } = useAuth0();
   const [activeTab, setActiveTab] = useState('home');
 
   if (isLoading) {
@@ -17,7 +17,7 @@ const UserDashboard = () => {
     switch (activeTab) {
       case 'home':
         return (
-          <div className="bg-white rounded-lg shadow-md p-6">
+          <div className="bg-black rounded-lg shadow-md p-6">
             <div className="flex items-center mb-4">
               <img
                 src={user?.picture}
@@ -26,10 +26,10 @@ const UserDashboard = () => {
               />
               <div>
                 <h2 className="text-2xl font-bold">{user?.name}</h2>
-                <p className="text-gray-600">{user?.email}</p>
+                <p className="text-white">{user?.email}</p>
               </div>
             </div>
-            <div className="bg-gray-100 rounded-lg p-4">
+            <div className="bg-black rounded-lg p-4">
               <h3 className="text-xl font-semibold mb-2">Liked Houses</h3>
               <p className="text-3xl font-bold text-blue-600">4</p>
             </div>
@@ -37,14 +37,14 @@ const UserDashboard = () => {
         );
       case 'billing':
         return (
-          <div className="bg-white rounded-lg shadow-md p-6">
+          <div className="bg-black rounded-lg shadow-md p-6">
             <h2 className="text-2xl font-bold mb-4">Billing / Subscription</h2>
             <p>Your subscription details and billing information will appear here.</p>
           </div>
         );
       case 'history':
         return (
-          <div className="bg-white rounded-lg shadow-md p-6">
+          <div className="bg-black rounded-lg shadow-md p-6">
             <h2 className="text-2xl font-bold mb-4">Property History</h2>
             <p>Your property viewing and interaction history will appear here.</p>
           </div>
@@ -55,30 +55,35 @@ const UserDashboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <div className="max-w-4xl mx-auto">
-        <div className="bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 p-1 rounded-lg">
-          <div className="bg-white rounded-lg">
-            <div className="flex border-b">
-              {['home', 'billing', 'history'].map((tab) => (
-                <button
-                  key={tab}
-                  className={`px-4 py-2 font-semibold ${
-                    activeTab === tab
-                      ? 'text-blue-600 border-b-2 border-blue-600'
-                      : 'text-gray-600 hover:text-blue-600'
-                  }`}
-                  onClick={() => setActiveTab(tab)}
-                >
-                  {tab.charAt(0).toUpperCase() + tab.slice(1)}
-                </button>
-              ))}
-            </div>
-            <div className="p-6">{renderTabContent()}</div>
+    <><div className="min-h-screen bg-gray-100 p-8">
+          <div className="max-w-4xl mx-auto">
+              <div className="bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 p-1 rounded-lg">
+                  <div className="bg-black rounded-lg">
+                      <div className="flex border-b">
+                          {['home', 'billing', 'history'].map((tab) => (
+                              <button
+                                  key={tab}
+                                  className={`px-4 py-2 font-semibold ${activeTab === tab
+                                          ? 'text-blue-600 border-b-2 border-blue-600'
+                                          : 'text-gray-600 hover:text-blue-600'}`}
+                                  onClick={() => setActiveTab(tab)}
+                              >
+                                  {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                              </button>
+                          ))}
+                      </div>
+                      <div className="p-6">{renderTabContent()}</div>
+                  </div>
+              </div>
           </div>
-        </div>
-      </div>
-    </div>
+      </div><button
+          onClick={() => logout({ returnTo: window.location.origin })}
+          className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+      >
+              Log Out
+          </button></>
+     
+    
   );
 };
 
