@@ -32,8 +32,8 @@ The Official Repo for Shorline Website
 - [Nodejs](https://nodejs.org/en)
 
 ```bash
-  git clone https://github.com/nfworking/realestate-v3.git
-  cd realestate-v3
+  git clone https://github.com/nfworking/Shoreline.git
+  cd Shoreline
   npm i
   npm run dev
 ```
