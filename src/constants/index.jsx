@@ -18,8 +18,6 @@ import { FaXTwitter, FaFacebook, FaInstagram } from "react-icons/fa6";
 
 export const LINKS = [
   { text: "Homes", targetId: "dishes" },
-  { text: "About", targetId: "about" },
-  { text: "Mission", targetId: "mission" },
   { text: "Review", targetId: "review" },
 ]
 

@@ -18,7 +18,7 @@ const UserDashboard = () => {
     switch (activeTab) {
       case 'home':
         return (
-          <div className="bg-black rounded-lg shadow-md p-6">
+          <div className=" mt-8 bg-black rounded-lg shadow-md p-6">
             <div className="flex items-center mb-4">
               <img
                 src={user.picture}

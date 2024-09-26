@@ -6,6 +6,9 @@ import PropertyViewHistory from './PropertyHistory'
 import AccountInformation from './AccountInformation'
 import UserDashboard from './something'
 import HeroSection from './HeroSection'
+import Navbar from './1/Navbar'
+import Footer from './1/Footer'
+import ContactSection from './ContactSection'
 export default function LoginPage() {
   const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0()
   const [email, setEmail] = useState('')
@@ -23,8 +26,9 @@ export default function LoginPage() {
   }
 
   return (
+   <><div className="min-h-screen flex items-center justify-center bg-black">
+      <Navbar />
 
-   <div className="min-h-screen flex items-center justify-center bg-black">
       <div className="bg-gray-900 p-8 rounded-lg shadow-xl w-96">
         <h1 className="text-3xl font-bold mb-6 text-center text-white">Login</h1>
 
@@ -37,7 +41,8 @@ export default function LoginPage() {
           </button>
         </div>
       </div>
-    </div>
+
+    </div><ContactSection /><Footer /></>
 
   )
 }

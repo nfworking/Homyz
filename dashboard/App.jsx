@@ -16,9 +16,11 @@ const App = () => {
       redirectUri={VITE_REDIRECT_URL}
     >
        <LoginPage/>
+
+
       {/* Your app components */}
     </Auth0Provider>
-    
+   
 
     </div>
   )
