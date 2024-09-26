@@ -2,7 +2,7 @@ import LoginPage from "../src/components/login"
 import { Auth0Provider } from '@auth0/auth0-react';
 
 
-
+const VITE_REDIRECT_URL = import.meta.env.VITE_REDIRECT_LOCAL_URL;
 
 
 
@@ -13,7 +13,7 @@ const App = () => {
 <Auth0Provider
       domain="dev-2dfpa0wa7iini3i4.us.auth0.com"
       clientId="YNk9dVv6qv2KNjlXAz7Y75KDGgmtn0De"
-      redirectUri="https://shorline.vercel.app/dashboard/"
+      redirectUri={VITE_REDIRECT_URL}
     >
        <LoginPage/>
       {/* Your app components */}
