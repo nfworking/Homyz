@@ -39,7 +39,7 @@ const Navbar = () => {
             ))}
         </div>
         <a href="/Contact_Us/" className="rounded-full bg-neutral-300/20 px-3 py-1 text-sm hover:opacity-50">Contact Us</a>
-        <a href="/downloads/" className="rounded-full bg-neutral-300/20 px-3 py-1 text-sm hover:opacity-50">Download our client</a>
+        
         <div className="p-4 flex items-center justify-center ">
       <div 
         className="relative inline-block"

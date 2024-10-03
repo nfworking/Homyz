@@ -2,9 +2,9 @@ import dish1 from "/casa1.png";
 import dish2 from "/water1.png";
 import dish3 from "/casa3.png";
 
-import dish4 from "../assets/dish4.jpeg";
-import dish5 from "../assets/dish5.jpeg";
-import dish6 from "../assets/dish6.jpeg";
+import dish4 from "/water1.png";
+import dish5 from "/casa1.png";
+import dish6 from "/water2.png";
 import dish7 from "../assets/dish7.jpeg";
 import dish8 from "../assets/dish8.jpeg";
 import dish9 from "../assets/dish9.jpeg";
