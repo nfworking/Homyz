@@ -1,6 +1,8 @@
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import path from "path"
+
 
 const root = resolve(__dirname, '.')
 const outDir = resolve(__dirname, 'dist')
@@ -30,4 +32,5 @@ export default defineConfig({
       }
     }
   }
+  
 })
