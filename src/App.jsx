@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar"
 import Dishes from "./components/Dishes"
 import About from "./components/About"
 import Mission from "./components/Mission"
-import ImprovedTestimonialCarousel from "./components/testimonals"
+import Marquee from "./components/testimonals"
 
 
 
@@ -20,7 +20,7 @@ const App = () => {
       <Dishes/>
       <About/>
       <Mission/>
-     <ImprovedTestimonialCarousel/>
+     <Marquee/>
       <Review/>
       <ContactSection/>
       <Footer/>
