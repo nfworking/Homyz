@@ -4,12 +4,14 @@ import { loadStripe } from "@stripe/stripe-js";
 import { PAYMENT_SUCCESS, PAYMENT_DECLINE } from "../../constants";
 import {MapContainer, TileLayer,} from 'react-leaflet';
 import GeoCoderMarker from "../1/MapMarker";
+
 const images = [
-  "https://www.eliteholidayhomes.com.au/wp-content/uploads/2022/03/Mexicali-1-1024x686.jpg",
-  "https://www.eliteholidayhomes.com.au/wp-content/uploads/2022/03/006_Open2view_ID784672-4_Mexicali_Court-1024x684.jpg",
-  "https://www.eliteholidayhomes.com.au/wp-content/uploads/2022/03/005_Open2view_ID784672-4_Mexicali_Court-1024x684.jpg",
-  "https://www.eliteholidayhomes.com.au/wp-content/uploads/2022/03/007_Open2view_ID784672-4_Mexicali_Court-1024x684.jpg",
+  "/coral1.png",
+  "/coral2.png",
+  "/coral3.png",
+  "/coral4.png",
 ];
+
 
 let stripePromise;
 
@@ -64,7 +66,7 @@ const ProductPage = () => {
   };
 
   return (
-    <div className="mt-24 bg-gray-900 text-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="mt-24 bg-black text-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="lg:grid lg:grid-cols-2 lg:gap-x-8 lg:items-start">
           {/* Product Image Slider */}
@@ -100,8 +102,9 @@ const ProductPage = () => {
                 />
               ))}
             </div>
-            <h1 className='text-3xl mt-10 flex justify-center items-center bg-black tracking-wider'>The Location</h1>
             <div className='bg-black'>
+            <h1 className='text-3xl mt-10 flex justify-center items-center bg-black tracking-wider'>The Location</h1>
+         
             <MapContainer
         center={[-28.0206097, 153.415578]}
         zoom={9}
@@ -118,10 +121,10 @@ const ProductPage = () => {
 
           {/* Product Info */}
           <div className="mt-10 px-4 sm:px-0 sm:mt-16 lg:mt-0">
-            <h1 className="text-3xl font-extrabold tracking-tight">Premium Wireless Headphones</h1>
+            <h1 className="text-3xl font-extrabold tracking-tight">Coral Sands</h1>
             <div className="mt-3">
-              <h2 className="sr-only">Product information</h2>
-              <p className="text-3xl text-gray-200">$299.99</p>
+         
+              <p className="text-3xl text-gray-200">$599,00,00</p>
             </div>
 
             {/* Rating */}
@@ -129,7 +132,7 @@ const ProductPage = () => {
               <h3 className="sr-only">Reviews</h3>
               <div className="flex items-center">
                 <div className="flex items-center">
-                  {[0, 1, 2, 3, 4].map((rating) => (
+                  {[0, 1, 2, 3, 4.5].map((rating) => (
                     <Star
                       key={rating}
                       className={`${
@@ -141,7 +144,7 @@ const ProductPage = () => {
                 </div>
                 <p className="sr-only">4 out of 5 stars</p>
                 <a href="#" className="ml-3 text-sm font-medium text-indigo-400 hover:text-indigo-300">
-                  117 reviews
+                  250,000 reviews
                 </a>
               </div>
             </div>
@@ -149,9 +152,7 @@ const ProductPage = () => {
             <div className="mt-6">
               <h3 className="sr-only">Description</h3>
               <p className="text-base text-gray-300">
-                Experience unparalleled sound quality with our Premium Wireless Headphones. 
-                Featuring advanced noise-cancellation technology and long-lasting battery life, 
-                these headphones are perfect for music enthusiasts and professionals alike.
+              Coral Sands is a stunning beachfront retreat that offers breathtaking ocean views and the soothing sound of waves lapping at the shore. This elegantly designed home features expansive windows that flood the living spaces with natural light, creating a warm and inviting atmosphere. With a spacious open-plan layout, the living and dining areas seamlessly flow onto a large deck, perfect for sunset gatherings. The gourmet kitchen is equipped with modern appliances and chic finishes, ideal for entertaining. Each bedroom is a serene oasis, with the master suite boasting a private balcony overlooking the beach. Surrounded by lush landscaping, Coral Sands is the perfect escape for those seeking relaxation and coastal charm.
               </p>
             </div>
 
@@ -159,10 +160,10 @@ const ProductPage = () => {
               <h3 className="text-sm font-medium text-gray-200">Highlights</h3>
               <div className="mt-4">
                 <ul role="list" className="pl-4 list-disc space-y-2">
-                  <li className="text-sm text-gray-300">40 hours of battery life</li>
-                  <li className="text-sm text-gray-300">Active Noise Cancellation</li>
-                  <li className="text-sm text-gray-300">Bluetooth 5.0 connectivity</li>
-                  <li className="text-sm text-gray-300">High-fidelity sound with aptX codec</li>
+                  <li className="text-sm text-gray-300">Expansive windows offer stunning vistas of the beach and horizon from every angle.</li>
+                  <li className="text-sm text-gray-300"> A large deck perfect for entertaining, complete with comfortable seating and dining areas.</li>
+                  <li className="text-sm text-gray-300">Modern appliances and stylish finishes make cooking a delight, ideal for hosting family and friends.</li>
+                  <li className="text-sm text-gray-300">A private balcony and luxurious amenities create a peaceful retreat with direct access to the beach.</li>
                 </ul>
               </div>
             </div>
@@ -170,7 +171,7 @@ const ProductPage = () => {
             <div className="mt-8">
               <h3 className="text-sm font-medium text-gray-200">In the box</h3>
               <div className="mt-4 space-y-2">
-                {['Headphones', 'Carrying case', 'USB-C charging cable', '3.5mm audio cable'].map((item) => (
+                {['Premium appliances in a gourmet kitchen', 'Smart home technology for security and convenience', 'Custom cabinetry and high-quality furnishings', 'Outdoor entertainment setup, including a BBQ area'].map((item) => (
                   <div key={item} className="flex items-center">
                     <Check className="h-5 w-5 text-green-500" aria-hidden="true" />
                     <p className="ml-3 text-sm text-gray-300">{item}</p>

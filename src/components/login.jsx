@@ -25,7 +25,7 @@ export default function LoginPage() {
   }
 
   return(
-    <div className="min-h-screen flex relative items-center justify-center ">
+    <div className="min-h-screen flex relative items-center justify-center">
       <Navbar />
 
       <div className=" z-10 p-8 rounded-lg shadow-xl">
@@ -42,16 +42,7 @@ export default function LoginPage() {
           </button>
         </div>
       </div>
-      <div className=" relative absolute">
-          <video
-            src={loginvid}
-            className="h-full w-full object-cover md:brightness-100"
-            muted
-            autoPlay
-            loop
-            playsInline
-          ></video>
-        </div>
+     
      
     </div>
       

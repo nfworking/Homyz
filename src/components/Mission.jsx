@@ -1,6 +1,7 @@
 import missionImg from "../assets/mission.jpeg"
 import herovideo from "../assets/masthead-bg.mp4"
-import { MISSION } from "../constants"
+import {MISSION} from "../constants/index"
+
 
 const Mission = () => {
   return (

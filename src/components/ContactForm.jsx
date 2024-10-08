@@ -64,7 +64,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 flex items-center justify-center px-5 sm:px-8 lg:px-10">
+    <div className="min-h-screen backdrop-blur-lg flex items-center justify-center px-5 sm:px-8 lg:px-10">
       <div className="max-w-xl w-full space-y-10">
         <div>
           <h2 className="mt-8 text-center text-4xl font-extrabold text-white">
@@ -72,7 +72,7 @@ export default function ContactForm() {
           </h2>
         </div>
         <form className="mt-10 space-y-8" onSubmit={handleSubmit}>
-          <div className="rounded-md shadow-sm -space-y-px">
+          <div className="rounded-md shadow-sm -space-y-px backdrop-blur-lg">
             <div>
               <label htmlFor="name" className="sr-only">Name</label>
               <input
@@ -80,7 +80,7 @@ export default function ContactForm() {
                 name="name"
                 type="text"
                 required
-                className="appearance-none rounded-none relative block w-full px-4 py-3 border border-gray-700 placeholder-gray-500 text-white bg-gray-800 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 text-lg"
+                className="appearance-none rounded-none relative block w-full px-4 py-3 border border-gray-700 placeholder-gray-500 text-white backdrop-blur-lg rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 text-lg"
                 placeholder="Name"
                 value={formData.name}
                 onChange={handleChange}
@@ -94,7 +94,7 @@ export default function ContactForm() {
                 type="email"
                 autoComplete="email"
                 required
-                className="appearance-none rounded-none relative block w-full px-4 py-3 border border-gray-700 placeholder-gray-500 text-white bg-gray-800 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 text-lg"
+                className="appearance-none rounded-none relative block w-full px-4 py-3 border border-gray-700 placeholder-gray-500 text-white backdrop-blur-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 text-lg"
                 placeholder="Email address"
                 value={formData.email}
                 onChange={handleChange}
@@ -107,7 +107,7 @@ export default function ContactForm() {
                 name="message"
                 required
                 rows={5}
-                className="appearance-none rounded-none relative block w-full px-4 py-3 border border-gray-700 placeholder-gray-500 text-white bg-gray-800 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 text-lg"
+                className="appearance-none rounded-none relative block w-full px-4 py-3 border border-gray-700 placeholder-gray-500 text-white backdrop-blur-lg rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 text-lg"
                 placeholder="Your message"
                 value={formData.message}
                 onChange={handleChange}
@@ -119,7 +119,7 @@ export default function ContactForm() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="group relative w-full flex justify-center py-3 px-5 border border-transparent text-lg font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="group relative w-full flex justify-center py-3 px-5 border border-transparent text-lg font-medium rounded-md text-white backdrop-blur-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>

@@ -1,6 +1,7 @@
-import video from "/src/assets/hero.mp4";
-import hero from "/src/assets/thumbnail.png";
+import video from "../../assets/6.mp4";
+import hero from "../../assets/thumbnail.png";
 import { motion } from "framer-motion";
+
 
 const HeroSection = () => {
   return (
@@ -18,12 +19,14 @@ const HeroSection = () => {
       </div>
       <div className="absolute -z-10">
         <div className="relative z-20 flex h-screen flex-col justify-end pb-20">
-            <h1 className="text-center justify-center text-9xl uppercase">The Lotus</h1>
+            <h1 className="text-center justify-center text-9xl uppercase">Main River Magic</h1>
               <p className="p-8 tracking-tighter text-lg text-white "></p>
         </div>
+
       </div>
     </section>
   );
 };
 
 export default HeroSection;
+

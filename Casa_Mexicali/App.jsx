@@ -3,6 +3,7 @@ import Navbar from "../src/components/1/Navbar"
 import ProductPage from "../src/components/1/HousePage"
 import ContactSection from "../src/components/ContactSection"
 import Footer from "../src/components/Footer"
+import BlurBackground from "../src/components/BlurBackground"
 
 
 
@@ -11,6 +12,8 @@ import Footer from "../src/components/Footer"
 
 const App = () => {
   return (
+	
+	  
     <div className="overflow-y-hidden text-neutral-200">
       <HeroSection/>
       <Navbar />
@@ -18,6 +21,7 @@ const App = () => {
       <ContactSection/>
       <Footer/>
     </div>
+	 
   )
 }
 

@@ -3,7 +3,10 @@ import Navbar from "./components/Navbar"
 import Dishes from "./components/Dishes"
 import About from "./components/About"
 import Mission from "./components/Mission"
-import Marquee from "./components/testimonals"
+import Testimonal from "./components/Testimonal"
+import BlurBackground from "./components/BlurBackground"
+import Projects from "./components/Projects"
+
 
 
 
@@ -14,17 +17,18 @@ import Footer from "./components/Footer"
 
 const App = () => {
   return (
-    <div className="overflow-y-hidden text-neutral-200">
-      <HeroSection/>
+    <><BlurBackground /><div className="overflow-y-hidden text-neutral-200">
+      <HeroSection />
       <Navbar />
-      <Dishes/>
-      <About/>
-      <Mission/>
-     <Marquee/>
-      <Review/>
-      <ContactSection/>
-      <Footer/>
-    </div>
+      <Dishes />
+      <About />
+      <Mission />
+<Projects/>
+      <Review />
+      <Testimonal />
+      <ContactSection />
+      <Footer />
+    </div></>
   )
 }
 
