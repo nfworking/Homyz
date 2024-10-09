@@ -1,4 +1,4 @@
-import LoginPage from "../src/components/login"
+import LoginPage from "../src/components/testlogin"
 import { Auth0Provider } from '@auth0/auth0-react';
 import BlurBackground from "../src/components/BlurBackground"
 
