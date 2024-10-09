@@ -29,16 +29,17 @@ const Navbar = () => {
   return (
     <nav className="fixed top-4 z-50 flex w-full flex-col items-center justify-center">
       <div className="flex w-full items-center justify-between overflow-y-hidden p-4 backdrop-blur-lg lg:m-2 lg:w-[50rem] lg:rounded-full lg:shadow-lg">
-        <h1>SHORLINE</h1>
+        <a href="/">SHORLINE</a>
         <div className="hidden space-x-6 lg:flex">
           {LINKS.map((link, index) => (
-            <a key={index} href={`#${link.targetId}`} className={`text-sm ${index !== 0 ? "border-l-2 border-neutral-300/20 pl-2" : ""} hover:opacity-50`} onClick={(e) => handleScroll(e, link.targetId)}>
+            <a key={index} href={link.targetId} className={`text-sm ${index !== 0 ? "border-l-2 border-neutral-300/20 pl-2" : ""} hover:opacity-50`} onClick={(e) => handleScroll(e, link.targetId)}>
                     {link.text}
                 </a>
                
             ))}
         </div>
         <a href="/Contact_Us/" className="rounded-full bg-neutral-300/20 px-3 py-1 text-sm hover:opacity-50">Contact Us</a>
+        <a href="/listings/" className="rounded-full bg-neutral-300/20 px-3 py-1 text-sm hover:opacity-50">Properties</a>
        <a href="https://github.com/nfworking/Shoreline-Client/raw/refs/heads/main/Shoreline-Installer.exe?download=true" className="rounded-full bg-neutral-300/20 px-3 py-1 text-sm hover:opacity-50">Download App</a>
         <div className="p-4 flex items-center justify-center ">
       <div 

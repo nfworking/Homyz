@@ -18,27 +18,27 @@ const UserDashboard = () => {
     switch (activeTab) {
       case 'home':
         return (
-          <div className=" mt-8 -z-300 bg-black rounded-lg shadow-md p-6">
+          <div className=" mt-8 -z-300 backdrop-blur-lg rounded-lg shadow-md p-6">
             <div className="flex items-center -z-300 mb-4">
               <img
                 src={user.picture}
                 alt="Profile"
                 className="w-16 h-16 rounded-full mr-4"
               />
-              <div className=' backdrop-blur-lg bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 p-1 py-6 px-6 rounded-lg'>
+              <div className=' backdrop-blur-lg  p-1 py-6 px-6 rounded-lg'>
                 <h2 className="text-2xl font-bold">{user?.name}</h2>
                 <p className="text-white">{user?.email}</p>
               </div>
             </div>
-            <div className="bg-black rounded-lg p-4">
-              <h3 className="text-xl font-semibold mb-2">Liked Houses</h3>
+            <div className="backdrop-blur-lg rounded-lg p-4">
+              <h3 className="text-xl font-semibold mb-2">Liked Houses ❤️</h3>
               <p className="text-3xl font-bold text-white">4</p>
             </div>
           </div>
         );
       case 'billing':
         return (
-          <div className="bg-black rounded-lg shadow-md p-6">
+          <div className="backdrop-blur-lg rounded-lg shadow-md p-6">
             <h2 className="text-2xl font-bold mb-4">Billing / Subscription</h2>
             <p>Your subscription details and billing information will appear here.</p>
             <Subscriptions />
@@ -46,7 +46,7 @@ const UserDashboard = () => {
         );
       case 'history':
         return (
-          <div className="bg-black rounded-lg shadow-md p-6">
+          <div className="backdrop-blur-lg rounded-lg shadow-md p-6">
             <h2 className="text-2xl font-bold mb-4">Property History</h2>
             <p>Your property viewing and interaction history will appear here.</p>
             <PropertyViewHistory />
@@ -58,10 +58,10 @@ const UserDashboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black p-8">
+    <div className="min-h-screen backdrop-blur-lg p-8">
           <div className="max-w-4xl mx-auto">
-              <div className="bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 p-1 rounded-lg">
-                  <div className="bg-black rounded-lg">
+              <div className="border-white p-1 rounded-lg">
+                  <div className="backdrop-blur-lg rounded-lg">
                   <button
           onClick={() => logout({ returnTo: window.location.origin })}
           className="bg-blue-600 mt-8 ml-8 mb-8 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"

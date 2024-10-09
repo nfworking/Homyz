@@ -1,7 +1,7 @@
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import path from "path"
+
 
 
 const root = resolve(__dirname, '.')
@@ -29,6 +29,7 @@ export default defineConfig({
         success: resolve(root, 'success', 'index.html'),
         declined: resolve(root, 'declined', 'index.html'),
         dashboard: resolve(root, 'dashboard', 'index.html'),
+        listings: resolve(root, 'listings', 'index.html'),
       }
     }
   }

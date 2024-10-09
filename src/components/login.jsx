@@ -36,9 +36,9 @@ export default function LoginPage() {
         <div className="mt-4 text-center">
           <button
             onClick={() => loginWithRedirect()}
-            className="mt-10 text-3xl text-white/300 hover:text-blue-500 bg-black border-2 border-blue-400 px-8 py-8 rounded-lg hover:bg-blue-400 hover:border-blue-500 hover:text-white transition duration-300 ease-in-out hover:scale-105"
+            className="mt-10 text-3xl text-white/300 hover:text-blue-500 backdrop-blur-lg border-2 border-blue-400 px-8 py-8 rounded-lg hover:bg-blue-400 hover:border-blue-500 hover:text-white transition duration-300 ease-in-out hover:scale-105"
           >
-            Sign in with Auth0
+            Sign in to Continue
           </button>
         </div>
       </div>

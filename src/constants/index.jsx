@@ -5,21 +5,20 @@ import dish3 from "/coral1.png";
 import dish4 from "/haven1.png";
 import dish5 from "/magic3.png";
 import dish6 from "/lotus1.png";
+import dish7 from "/casa3.png"
+import dish8 from "/water4.png"
+import dish9 from "/coral3.png"
+import dish10 from "/magic1.png"
 
 
-import projects1 from "../assets/projects1.webp";
-import projects2 from "../assets/projects2.webp";
-import projects3 from "../assets/projects3.webp";
-import projects4 from "../assets/projects4.webp";
-import projects5 from "../assets/projects5.webp";
-import projects6 from "../assets/projects6.webp";
 
-import person1 from "../assets/person1.webp";
-import person2 from "../assets/person2.webp";
-import person3 from "../assets/person3.webp";
-import person4 from "../assets/person4.webp";
-import person5 from "../assets/person5.webp";
-import person6 from "../assets/person6.webp";
+
+import person1 from "../assets/profile1.webp";
+import person2 from "../assets/profile2sub.jpg";
+import person3 from "../assets/profile3.jpg";
+import person4 from "../assets/newceo.jpg";
+import person5 from "../assets/profile5.jpg";
+import person6 from "../assets/director.jpg";
 
 
 import italian from "../assets/italian.jpeg";
@@ -29,8 +28,7 @@ import indian from "../assets/indian.jpeg";
 import { FaXTwitter, FaFacebook, FaInstagram } from "react-icons/fa6";
 
 export const LINKS = [
-  { text: "Homes", targetId: "dishes" },
-  { text: "Review", targetId: "review" },
+
 ]
 
 export const HERO_CONTENT = {
@@ -45,39 +43,39 @@ export const HERO_CONTENT = {
 
 export const PROJECTS = [
   {
-    name: "Allen",
-    description: "Helping your wildest needs",
+    name: " Anna Anderson",
+    description: "Head of Customer sales at Shoreline Homes",
     image: person1,
     link: "https://Instagram.com",
   },
   {
-    name: "Josh",
-    description: "Manager of developing Homes",
+    name: "Chloe Smith",
+    description: "Manager of Queensland Division of Shoreline Homes",
     image: person2,
     link: "https://Instagram.com",
   },
   {
-    name: "Zach",
+    name: "Zach Morgan ",
     description: "Assistant director of the show rooms",
     image: person3,
     link: "https://Instagram.com",
   },
   {
-    name: "Peter",
+    name: "Peter Smith ",
     description:
       "CEO of Shoreline Homes 2002-2024",
     image: person4,
     link: "https://Instagram.com",
   },
   {
-    name: "Miles",
+    name: "Miles Jackson",
     description: "Assistant director of In Construction Homes",
     image: person5,
     link: "https://Instagram.com",
   },
   {
-    name: "Anthony",
-    description: "Deputy CEO of Shoreline Homes 2022-2044",
+    name: "Christina Parker",
+    description: "Deputy CEO of Shoreline Homes 2019-2044",
     image: person6,
     link: "https://Instagram.com",
   },
@@ -249,6 +247,31 @@ export const DISHES = [
     description: "An exclusive home on the front of Sunshine Coast Noosa Beach",
     forward: "/The_Lotus/",
   },
+
+  {
+    image: dish7,
+    title: "Coming Soon",
+    description: "A 2025 comming soon exclusive property developed by the best international team",
+    forward: "#",
+  },
+  {
+    image: dish8,
+    title: "Coming Soon",
+    description: "A 2025 comming soon exclusive property developed by the best international team",
+    forward: "#",
+  },
+  {
+    image: dish9,
+    title: "Coming Soon",
+    description: "A 2025 comming soon exclusive property developed by the best international team",
+    forward: "#",
+  },
+  {
+    image: dish10,
+    title: "Coming Soon",
+    description: "A 2025 comming soon exclusive property developed by the best international team",
+    forward: "#",
+  }
   
 ];
 
@@ -259,7 +282,7 @@ export const ABOUT = {
 };
 
 export const MISSION =
-  "At Shorline, our mission is to provide the best customer experience to our clients";
+  "At Shoreline Homes, our mission is to connect you with your dream beachfront property, offering stunning ocean views and a lifestyle of relaxation, luxury, and coastal charm. We’re committed to providing exceptional service and helping you find your perfect piece of paradise along the shoreline.";
 
 export const CUSINES = [
   {

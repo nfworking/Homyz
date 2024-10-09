@@ -20,7 +20,7 @@ const App = () => {
     <><BlurBackground /><div className="overflow-y-hidden text-neutral-200">
       <HeroSection />
       <Navbar />
-      <Dishes />
+     
       <About />
       <Mission />
 <Projects/>
